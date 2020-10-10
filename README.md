@@ -1,10 +1,10 @@
-# Project Name
+# Awesome Steam Reader
 
 > One paragraph statement about the project.
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+Awesome Steam Reader is a Steam store scrapping tool. It scrapes the Steam store page and the initial focus is to get information of the main featured deals for the day using your terminal.
 
 ## Built With
 
