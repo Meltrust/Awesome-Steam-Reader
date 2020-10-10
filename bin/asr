@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
 print 'hello world'
+
+# Here will be the main user interface and interaction.
