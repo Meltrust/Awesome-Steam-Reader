@@ -1,6 +1,6 @@
 # Awesome Steam Reader
 
-> One paragraph statement about the project.
+> An awesome Steam store scrapper.
 
 ![screenshot](./app_screenshot.png)
 
