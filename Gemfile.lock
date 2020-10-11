@@ -17,7 +17,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler
+  bundler (= 2.1.4)
   colorize
   httparty
   nokogiri
