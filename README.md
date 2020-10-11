@@ -8,9 +8,15 @@ Awesome Steam Reader is a Steam store scrapping tool. It scrapes data from the m
 
 ## Built With
 
-- Ruby language!,
-- HTTparty gem,
+- Ruby language!
+- HTTparty gem
 - Nokogiri gem
+
+## Future Additions
+
+- Tables.
+- Pagination.
+- Read and present other info, like best-sellers and trending games.
 
 ## Getting Started
 
