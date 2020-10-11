@@ -4,17 +4,13 @@
 
 ![screenshot](./app_screenshot.png)
 
-Awesome Steam Reader is a Steam store scrapping tool. It scrapes data from the main Steam store page and the initial focus is to get information of the main featured deals for the day using your terminal.
+Awesome Steam Reader is a Steam store scrapping tool. It scrapes data from the main Steam store page and the initial focus is to get information of the main featured deals for the day using your terminal in full color.
 
 ## Built With
 
-- Major languages,
-- frameworks,
-- technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
+- Ruby language!,
+- HTTparty gem,
+- Nokogiri gem
 
 
 ## Getting Started
@@ -26,32 +22,29 @@ Awesome Steam Reader is a Steam store scrapping tool. It scrapes data from the m
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Ruby must be installed in your machine.
 
 ### Setup
-
-### Install
-
+- Clone this repository into your local machine.
+- Run this command to get the dependencies.
+```bash
+  $ bundle install
+```
+- Run the main file by typing this in your command line:
+```bash
+  $ cd Awesome-Steam-Reader
+  $ cd bin
+  $ ruby asr
+```
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+Just follow the on screen instructions.
 
 ## Authors
 
-👤 **Author1**
+👤 **Miguel Tapia Escalera**
 
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
-
-👤 **Author2**
-
-- Github: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- Linkedin: [linkedin](https://linkedin.com/linkedinhandle)
+- Github: [@Meltrust](https://github.com/Meltrust)
+- Linkedin: [linkedin](https://www.linkedin.com/in/meltrust/)
 
 ## 🤝 Contributing
 
