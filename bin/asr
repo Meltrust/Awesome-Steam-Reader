@@ -16,6 +16,7 @@ puts
 puts '***/ Welcome to Awesome Steam Reader /***'.yellow.bold
 puts
 puts 'Look for the featured Steam daily deals with your terminal and skip the clutter!'
+puts 'Ctrl+click on any url to go to the offer!'
 puts
 puts "Made by #{author} \u{1f600} with \u{1f495}"
 puts
@@ -33,27 +34,23 @@ puts
 puts "**/\u{1f4B0} These are the main Steam deals for today!! \u{1f4B0}/**".green.bold
 puts
 puts
+# initialize MainScrapper module and class
+display_deals = ScrapePage::MainScraper.new
 
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
-puts 'info here'
+# call the results method from the MainScrapper class
+display_deals.results
+
 puts
 puts
-puts "Prepare your wallet \u{1F4B8}"
+puts "Prepare your wallet \u{1F4B8}  \u{1f607}"
+puts 'https://www.youtube.com/watch?v=rP2MDtWu5t0'.green.bold
 puts
 # the scraper main method is called and reads the data and puts it in a variable called 'deals', which is an array.
 
 # the deals variable is called to present the results in a list.
 
 # Say goodbye
+
 puts "Thank you for using my creations \u{1f495}"
 puts 'https://github.com/Meltrust/Awesome-Steam-Reader'.green.bold
 puts
