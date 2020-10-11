@@ -1,5 +1,60 @@
 #!/usr/bin/env ruby
-
-print 'hello world'
+require_relative '../lib/scraper.rb'
+require 'colorize'
+require 'io/console'
 
 # Here will be the main user interface and interaction.
+
+# Greet the user
+system('clear') || system('cls')
+
+author = '@Meltrust'.colorize(:magenta).bold
+
+puts
+puts
+puts
+puts '***/ Welcome to Awesome Steam Reader /***'.yellow.bold
+puts
+puts 'Look for the featured Steam daily deals with your terminal and skip the clutter!'
+puts
+puts "Made by #{author} \u{1f600} with \u{1f495}"
+puts
+puts
+puts
+puts 'Press any key to continue...'.blink
+STDIN.getch
+print "            \r" # extra space to overwrite in case next sentence is short
+
+# Display the information
+system('clear') || system('cls')
+
+puts
+puts
+puts "**/\u{1f4B0} These are the main Steam deals for today!! \u{1f4B0}/**".green.bold
+puts
+puts
+
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts 'info here'
+puts
+puts
+puts "Prepare your wallet \u{1F4B8}"
+puts
+# the scraper main method is called and reads the data and puts it in a variable called 'deals', which is an array.
+
+# the deals variable is called to present the results in a list.
+
+# Say goodbye
+puts "Thank you for using my creations \u{1f495}"
+puts 'https://github.com/Meltrust/Awesome-Steam-Reader'.green.bold
+puts
+puts
