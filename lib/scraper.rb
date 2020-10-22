@@ -43,7 +43,7 @@ module ScrapePage
 
         puts
         puts 'Press any key to continue...' unless count == 40
-        STDIN.getch
+        $stdin.getch
         puts
       end
     end

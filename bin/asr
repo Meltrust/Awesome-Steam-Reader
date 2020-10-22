@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../lib/scraper.rb'
+require_relative '../lib/scraper'
 require 'colorize'
 require 'io/console'
 
@@ -23,7 +23,7 @@ puts
 puts
 puts
 puts 'Press any key to continue...'.blink
-STDIN.getch
+$stdin.getch
 print "            \r" # extra space to overwrite in case next sentence is short
 
 # Display the information
