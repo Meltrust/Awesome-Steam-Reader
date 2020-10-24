@@ -2,6 +2,7 @@
 require_relative '../lib/scraper'
 require 'colorize'
 require 'io/console'
+require 'byebug'
 
 # Here will be the main user interface and interaction.
 

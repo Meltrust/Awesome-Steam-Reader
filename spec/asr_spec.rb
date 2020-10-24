@@ -1,4 +1,4 @@
-require_relative '../lib/scraper.rb'
+require_relative '../lib/scraper'
 
 # scrap = ScrapePage::MainScraper.new
 # p scrap.scraper
