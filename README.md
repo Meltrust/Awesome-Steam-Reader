@@ -52,7 +52,7 @@ Just follow the on screen instructions.
 👤 **Miguel Tapia Escalera**
 
 - Github: [@Meltrust](https://github.com/Meltrust)
-- Linkedin: [linkedin](https://www.linkedin.com/in/meltrust/)
+- Linkedin: [meltrust](https://www.linkedin.com/in/meltrust/)
 
 ## 🤝 Contributing
 
