@@ -2,15 +2,22 @@ require 'httparty'
 require 'nokogiri'
 require 'colorize'
 require 'io/console'
+require 'spinning_cursor'
 
 module ScrapePage
   class ScrapeOffers
     def offers_scraper
+      SpinningCursor.run do
+        message 'Done!'
+      end
       parsed_page = Nokogiri::HTML(HTTParty.get('https://store.steampowered.com/').body)
+      SpinningCursor.stop
+      parsed_page.css('div#tab_specials_content a') # 40 deals
+    end
+
+    def offers_array_builder
+      deal_listings = offers_scraper
       deals = []
-
-      deal_listings = parsed_page.css('div#tab_specials_content a') # 40 deals
-
       i = 0
       while i <= 39
         deal_listings.each do |deal_listing| # iterate through all listings and build a hash with data from each
@@ -36,7 +43,8 @@ class Presenter < ScrapePage::ScrapeOffers
 
   def present_results
     count = 0
-    offers_scraper.each do |h|
+
+    offers_array_builder.each do |h|
       puts "#{count + 1}. " + h[:title].yellow.bold
       puts h[:original_price].blue
       puts h[:discount].green.bold
@@ -49,7 +57,7 @@ class Presenter < ScrapePage::ScrapeOffers
       puts
       puts 'Press any key to continue...' unless count == 40
 
-      $stdin.getch
+      $stdin.getch unless count == 40
       puts
     end
   end

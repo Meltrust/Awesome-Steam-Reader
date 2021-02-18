@@ -3,6 +3,7 @@ GEM
   specs:
     colorize (0.8.1)
     diff-lcs (1.4.4)
+    highline (1.6.21)
     httparty (0.18.1)
       mime-types (~> 3.0)
       multi_xml (>= 0.5.2)
@@ -26,6 +27,8 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
+    spinning_cursor (0.3.0)
+      highline (~> 1.6.19)
 
 PLATFORMS
   ruby
@@ -35,6 +38,7 @@ DEPENDENCIES
   httparty
   nokogiri
   rspec
+  spinning_cursor (~> 0.3.0)
 
 BUNDLED WITH
    2.1.4
