@@ -36,10 +36,12 @@ puts "**/\u{1f4B0} These are the main Steam deals for today!! \u{1f4B0}/**".gree
 puts
 puts
 # initialize MainScrapper module and class
-display_deals = ScrapePage::MainScraper.new
+# display_deals = ScrapePage::MainScraper.new
+display_deals = Presenter.new
 
 # call the results method from the MainScrapper class
-display_deals.results
+# display_deals.results
+display_deals.present_results
 
 puts
 puts

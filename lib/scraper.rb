@@ -4,9 +4,9 @@ require 'colorize'
 require 'io/console'
 
 module ScrapePage
-  class MainScraper
-    def scraper
-      parsed_page = Nokogiri::HTML(HTTParty.get('https://store.steampowered.com/'))
+  class ScrapeOffers
+    def offers_scraper
+      parsed_page = Nokogiri::HTML(HTTParty.get('https://store.steampowered.com/').body)
       deals = []
 
       deal_listings = parsed_page.css('div#tab_specials_content a') # 40 deals
@@ -28,24 +28,29 @@ module ScrapePage
       end
       deals[0..39] # return the first 40 array of deals
     end
+  end
+end
 
-    def results
-      count = 0
-      scraper.each do |h|
-        puts "#{count + 1}. " + h[:title].yellow.bold
-        puts h[:original_price].blue
-        puts h[:discount].green.bold
-        puts h[:price].green.bold
-        puts h[:url]
-        puts
-        count += 1
-        next unless (count % 5).zero?
+class Presenter < ScrapePage::ScrapeOffers
+  include ScrapePage
 
-        puts
-        puts 'Press any key to continue...' unless count == 40
-        $stdin.getch
-        puts
-      end
+  def present_results
+    count = 0
+    offers_scraper.each do |h|
+      puts "#{count + 1}. " + h[:title].yellow.bold
+      puts h[:original_price].blue
+      puts h[:discount].green.bold
+      puts h[:price].green.bold
+      puts h[:url]
+      puts
+      count += 1
+      next unless (count % 5).zero?
+
+      puts
+      puts 'Press any key to continue...' unless count == 40
+
+      $stdin.getch
+      puts
     end
   end
 end
