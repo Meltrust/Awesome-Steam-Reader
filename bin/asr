@@ -1,8 +1,6 @@
 #!/usr/bin/env ruby
 require_relative '../lib/presenter'
 require 'colorize'
-require 'io/console'
-require 'byebug'
 
 # Here will be the main user interface and interaction.
 
@@ -35,12 +33,12 @@ puts
 puts "**/\u{1f4B0} These are the main Steam deals for today!! \u{1f4B0}/**".green.bold
 puts
 puts
-# initialize MainScrapper module and class
-# display_deals = ScrapePage::MainScraper.new
+
+# instantiate class
+
 display_deals = Presenter.new
 
-# call the results method from the MainScrapper class
-# display_deals.results
+# call the present_deals to show results
 
 display_deals.present_deals
 
@@ -49,9 +47,7 @@ puts
 puts "Prepare your wallet \u{1F4B8}  \u{1f607}"
 puts 'https://www.youtube.com/watch?v=rP2MDtWu5t0'.green.bold
 puts
-# the scraper main method is called and reads the data and puts it in a variable called 'deals', which is an array.
-
-# the deals variable is called to present the results in a list.
+# the offers_array_builder method is called which reads the scraped data and puts it in '@deals', which is an array.
 
 # Say goodbye
 
@@ -59,5 +55,3 @@ puts "Thank you for using my creations \u{1f495}"
 puts 'https://github.com/Meltrust/Awesome-Steam-Reader'.green.bold
 puts
 puts
-
-# test commit 1

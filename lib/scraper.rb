@@ -4,21 +4,28 @@ require 'colorize'
 require 'io/console'
 require 'spinning_cursor'
 
-module ScrapePage
+module Scraper
   class ScrapeOffers
+    # scrape the whole page
+    def self.page_scraper
+      Nokogiri::HTML(HTTParty.get('https://store.steampowered.com/').body)
+    end
+
     private
 
-    def offers_scraper
+    def offers_parser
+      # parse the offers and announce loading while it's done
       SpinningCursor.run do
         message 'Done!'
       end
-      @parsed_page = Nokogiri::HTML(HTTParty.get('https://store.steampowered.com/').body)
+      parsed_offers = ScrapeOffers.page_scraper.css('div#tab_specials_content a') # 40 deals
       SpinningCursor.stop
-      @parsed_page.css('div#tab_specials_content a') # 40 deals
+      parsed_offers
     end
 
+    # put all the parsed offers in an array
     def offers_array_builder
-      @deal_listings = offers_scraper
+      @deal_listings = offers_parser
       @deals = []
       i = 0
       while i <= 39

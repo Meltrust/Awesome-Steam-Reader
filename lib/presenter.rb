@@ -1,8 +1,9 @@
 require_relative '../lib/scraper'
 
-class Presenter < ScrapePage::ScrapeOffers
-  include ScrapePage
+class Presenter < Scraper::ScrapeOffers
+  include Scraper
 
+  # build the results list
   def present_deals
     @count = 0
 
