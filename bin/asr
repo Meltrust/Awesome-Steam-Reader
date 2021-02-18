@@ -42,7 +42,7 @@ display_deals = Presenter.new
 # call the results method from the MainScrapper class
 # display_deals.results
 
-display_deals.present_results
+display_deals.present_deals
 
 puts
 puts
