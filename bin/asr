@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-require_relative '../lib/scraper'
+require_relative '../lib/presenter'
 require 'colorize'
 require 'io/console'
 require 'byebug'
