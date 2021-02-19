@@ -15,13 +15,14 @@ module Scrapper
 
     # parse the offers and announce loading while it's done
     def offers_parser
-      SpinningCursor.run do
-        message 'Done!'
-      end
+      SpinningCursor.run { message 'Done!' }
+
       parsed_offers = PageScrapper.page_scrapper.css('div#tab_specials_content a') # 40 deals
       SpinningCursor.stop
       parsed_offers
     end
+
+    public
 
     # put all the parsed offers in an array
     def offers_array_builder
