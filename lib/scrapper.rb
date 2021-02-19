@@ -4,10 +4,10 @@ require 'colorize'
 require 'io/console'
 require 'spinning_cursor'
 
-module Scraper
+module Scrapper
   class PageScrapper
     # scrape the whole page
-    def self.page_scraper
+    def self.page_scrapper
       Nokogiri::HTML(HTTParty.get('https://store.steampowered.com/').body)
     end
 
@@ -18,7 +18,7 @@ module Scraper
       SpinningCursor.run do
         message 'Done!'
       end
-      parsed_offers = PageScrapper.page_scraper.css('div#tab_specials_content a') # 40 deals
+      parsed_offers = PageScrapper.page_scrapper.css('div#tab_specials_content a') # 40 deals
       SpinningCursor.stop
       parsed_offers
     end

@@ -1,8 +1,8 @@
-require_relative '../lib/scraper'
+require_relative '../lib/scrapper'
 
 module Presenter
-  include Scraper
-  class OffersPresenter < Scraper::PageScrapper
+  include Scrapper
+  class OffersPresenter < Scrapper::PageScrapper
     # build the results list
     # include a 'printing_mode' argument to be able to test the method without printing everything on screen each time.
     def present_deals?(printing_mode: true)
