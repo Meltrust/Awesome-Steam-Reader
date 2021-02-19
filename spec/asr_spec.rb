@@ -4,7 +4,6 @@ require 'rspec'
 
 describe 'PageScraper' do
   let(:main_scrapper) { Scrapper::PageScrapper.new }
-  # let(:present_results) { Presenter::OffersPresenter.new }
 
   describe '#page_scraper' do
     it 'Does not return nil' do
@@ -39,6 +38,33 @@ describe 'PageScraper' do
     end
     it 'Has 40 elements' do
       expect(main_scrapper.offers_array_builder.size).to eq(40)
+    end
+    it 'Has a key called "url" that includes "https"' do
+      expect(main_scrapper.offers_array_builder[0][:url]).to include('https')
+    end
+    it 'Has a key called "title"' do
+      expect(main_scrapper.offers_array_builder[0]).to have_key(:title)
+    end
+  end
+end
+
+describe 'OffersPresenter' do
+  let(:present_results) { Presenter::OffersPresenter.new }
+
+  # for testing purposes this one returns ['test]
+  describe 'present_deals' do
+    it 'Is an array' do
+      expect(present_results.present_deals).to eq ['test']
+    end
+    # Check true argument with mock data.
+    it 'takes true argument' do
+      dbl = double('mock', arg: true)
+      expect(dbl.arg).to eq(true)
+    end
+    # Check false argument with mock data.
+    it 'takes false argument' do
+      dbl2 = double('mock2', arg: false)
+      expect(dbl2.arg).to eq(false)
     end
   end
 end

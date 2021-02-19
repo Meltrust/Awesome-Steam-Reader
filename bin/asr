@@ -40,7 +40,7 @@ display_deals = Presenter::OffersPresenter.new
 
 # call the present_deals to show results
 
-display_deals.present_deals?(printing_mode: true)
+display_deals.present_deals(printing_mode: true)
 
 puts
 puts

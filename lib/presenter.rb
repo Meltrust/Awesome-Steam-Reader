@@ -5,8 +5,8 @@ module Presenter
   class OffersPresenter < Scrapper::PageScrapper
     # build the results list
     # include a 'printing_mode' argument to be able to test the method without printing everything on screen each time.
-    def present_deals?(printing_mode: true)
-      return nil if printing_mode == false
+    def present_deals(printing_mode: false)
+      return ['test'] if printing_mode == false
 
       @count = 0
 
