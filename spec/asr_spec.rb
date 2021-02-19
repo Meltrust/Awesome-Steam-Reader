@@ -66,5 +66,10 @@ describe 'OffersPresenter' do
       dbl2 = double('mock2', arg: false)
       expect(dbl2.arg).to eq(false)
     end
+    it 'test' do
+      dbl3 = double('mock3', arg: false)
+      expect(dbl3).to receive(:present_deals).with(false)
+      dbl3.present_deals(false)
+    end
   end
 end
