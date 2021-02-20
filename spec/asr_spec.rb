@@ -51,7 +51,7 @@ end
 describe 'OffersPresenter' do
   let(:present_results) { Presenter::OffersPresenter.new }
 
-  # for testing purposes this one returns ['test]
+  # for testing purposes this one returns ['test']
   describe 'present_deals' do
     it 'Is an array' do
       expect(present_results.present_deals).to eq ['test']
