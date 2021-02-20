@@ -4,7 +4,11 @@
 
 ![screenshot](app_screenshot.png)
 
-Awesome Steam Reader is a Steam store scrapping tool. It scrapes data from the main Steam store page and the initial focus is to get information of the main featured deals for the day using your terminal in full color. Now you can access the deals directly skipping the clutter. Use your terminal!!
+Awesome Steam Reader is a Steam store scrapping tool. It scrapes data from the main Steam store page and the initial focus is to get information of the main featured deals for the day using your terminal in full color. 
+
+## Why is this useful?
+
+Now you can access the deals directly by skipping the webpage clutter and all the ads, accessing the deals for the day directly. Use your terminal!!
 
 ## Built With
 
