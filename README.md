@@ -12,7 +12,7 @@ Now you can access the deals directly by skipping the webpage clutter and all th
 
 ### Video presentation of the project
 
-https://www.loom.com/share/621a78b1ad0b4ee8a72eced0f30ceffc
+https://www.loom.com/share/d3f310ce945446458b4e124da824c560
 
 
 ## Built With
