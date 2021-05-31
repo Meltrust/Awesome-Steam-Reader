@@ -1,0 +1,73 @@
+#!/usr/bin/env ruby
+require_relative '../lib/array_builders'
+require 'colorize'
+
+# Here will be the main user interface and interaction.
+
+# Greet the user
+system('clear') || system('cls')
+
+author = '@Meltrust'.colorize(:magenta).bold
+
+puts
+puts
+puts
+puts '***/ Welcome to Awesome Steam Reader /***'.yellow.bold
+puts
+puts 'Look for the featured Steam daily deals with your terminal and skip the clutter!'
+puts 'Ctrl+click on any url to go to the offer!'
+puts
+puts "Made by #{author} \u{1f600} with \u{1f495}"
+puts
+puts
+puts
+puts 'Press any key to continue...'.blink
+$stdin.getch
+print "            \r" # extra space to overwrite in case next sentence is short
+
+# Display the information
+system('clear') || system('cls')
+
+puts
+puts
+puts "**/\u{1f4B0} These are the main Steam deals for today!! \u{1f4B0}/**".green.bold
+puts
+puts
+
+# instantiate class
+
+display_deals = ArrayBuilders::OffersBuilder.new
+
+# present results on screen, 5 at a time.
+@count = 0
+
+display_deals.offers_array_builder.each do |h|
+  puts "#{@count + 1}. " + h[:title].yellow.bold
+  puts h[:original_price].blue
+  puts h[:discount].green.bold
+  puts h[:price].green.bold
+  puts h[:url]
+  puts
+  @count += 1
+  next unless (@count % 5).zero?
+
+  puts
+  puts 'Press any key to continue...' unless @count == 40
+
+  $stdin.getch unless @count == 40
+  puts
+end
+
+puts
+puts
+puts "Prepare your wallet \u{1F4B8}  \u{1f607}"
+puts
+
+# the offers_array_builder method is called which reads the scraped data and puts it in '@deals', which is an array.
+
+# Say goodbye
+
+puts "Thank you for using my creations \u{1f495}"
+puts 'https://github.com/Meltrust/Awesome-Steam-Reader'.green.bold
+puts
+puts

@@ -1,8 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'awesome_print'
-gem 'byebug'
+gem 'colorize'
 gem 'httparty'
 gem 'nokogiri'
 gem 'rspec'
-gem 'rubocop'
+gem 'spinning_cursor', '~> 0.3.0'
